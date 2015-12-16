@@ -1,0 +1,18 @@
+{
+	"uuid": "3791adb8-6116-44cf-a67f-a60e1135d6e6",
+	"shortName": "pblNote",
+	"longName": "pblNote",
+	"companyName": "NCC",
+	"versionLabel": "1.0",
+	"sdkVersion": "3",
+	"targetPlatforms": ["aplite", "basalt", "chalk"],
+	"watchapp": {
+		"watchface": false
+	},
+	"appKeys": {
+		
+	},
+	"resources": {
+		"media": []
+	}
+}
