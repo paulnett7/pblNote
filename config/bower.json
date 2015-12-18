@@ -1,0 +1,18 @@
+{
+  "name": "config",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Paul Nettleton"
+  ],
+  "license": "No License",
+  "homepage": "pblNote.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
