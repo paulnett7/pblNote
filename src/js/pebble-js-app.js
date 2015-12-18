@@ -30,8 +30,12 @@ Pebble.addEventListener('appmessage',
 );
 
 Pebble.addEventListener('showConfiguration', 
-	function(e) {
-		Pebble.openURL('https://pblNote.com/config-page.html');
+	function (e) {
+	    var url = 'https://pblNote.com/config-page.html';
+
+	    console.log('Showing config page: ' + url);
+
+		Pebble.openURL(url);
 	}
 );
 
@@ -40,10 +44,12 @@ Pebble.addEventListener('webviewClosed',
 		var config_data = JSON.parse(decodeURIComponent(data.response));
 		console.log('Config window returned: ', JSON.stringify(config_data));
 
-		//dictionary to send via AppMessage
-		var dict = {
-			//keys of the config data, OAuth token
-		};
+		if (config_data.OAuth) {
+		    //dictionary to send via AppMessage
+		    var dict = {
+		        //keys of the config data, OAuth token
+		    };
+		}
 	
 		Pebble.sendAppMessage(dict, function() {
 			console.log('Sent config data to Pebble');
