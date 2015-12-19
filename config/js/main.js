@@ -16,7 +16,7 @@ var xhrRequest = function (url, type, callback) {
         callback(this.responseText);
     };
     xhr.open(type, url);
-    xhr.setRequestHeader("Access-Control-Allow-Origin", true);
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://paulnett7.github.io");
     xhr.send();
 };
 
