@@ -5,7 +5,7 @@
 })();
 
 var clientID = "0000000044174804";
-var redirectURL = https%3a%2f%2fpaulnett7.github.io%2fpblnote%2fconfig%2fconfig-page.html;
+var redirectURL = "https%3a%2f%2fpaulnett7.github.io%2fpblnote%2fconfig%2fconfig-page.html";
 
 var accessToken;
 var refreshToekn;
@@ -16,7 +16,7 @@ var xhrRequest = function (url, type, callback) {
         callback(this.responseText);
     };
     xhr.open(type, url);
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://paulnett7.github.io");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", https://paulnett7.github.io);
     xhr.send();
 };
 
