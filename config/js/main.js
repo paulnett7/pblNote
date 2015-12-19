@@ -2,7 +2,7 @@
     //loadOptions();
     authHandler();
     submitHandler();
-    if (getQueryVariable(code)) {
+    if (getQueryVariable("code")) {
         authorized();
     }
 })();
