@@ -28,7 +28,7 @@ function authHandler() {
 
         var scopes = "offic.onenote_update%20wl.offline_access";
         
-        var url = "https://login.live.com/oauth20_authorize.srf?response_type=code&?client_id=" + clientID + "&redirect_uri=" + redirectURL + "&scope=" + scopes;
+        var url = "https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=" + clientID + "&redirect_uri=" + redirectURL + "&scope=" + scopes;
 
         xhrRequest(url, 'GET', function (responseText) {
             console.log("CODE Response recieved.")
