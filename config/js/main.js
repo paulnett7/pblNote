@@ -34,7 +34,7 @@ function authHandler() {
         
         var url = "https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=" + clientID + "&redirect_uri=" + redirectURL + "&scope=" + scopes;
 
-        window.location.replace = url;
+        window.location.replace(url);
         /*xhrRequest(url, 'GET', function (responseText) {
             console.log("CODE Response recieved.")
 
