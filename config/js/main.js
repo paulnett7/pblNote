@@ -5,7 +5,7 @@
 })();
 
 var clientID = "0000000044174804";
-var redirectURL = "paulnett7.github.io%2fpblnote%2fconfig%2fconfig-page.html";
+var redirectURL = "https%3a%2f%2fpaulnett7.github.io%2fpblnote%2fconfig%2fconfig-page.html";
 
 var accessToken;
 var refreshToekn;
