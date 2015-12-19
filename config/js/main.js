@@ -55,9 +55,9 @@ function authHandler() {
             };
             xhr.open('POST', url, true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send();*/
-        });
-    })
+            xhr.send();
+        });*/
+    });
 }
 
 function authorized() {
