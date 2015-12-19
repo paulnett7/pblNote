@@ -26,7 +26,7 @@ function authHandler() {
     $authButton.on('click', function () {
         console.log('Redirecting to authorization');
 
-        var scopes = "offic.onenote_update%20wl.offline_access";
+        var scopes = "office.onenote_update%20wl.offline_access";
         
         var url = "https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=" + clientID + "&redirect_uri=" + redirectURL + "&scope=" + scopes;
 
