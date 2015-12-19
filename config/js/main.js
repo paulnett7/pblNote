@@ -1,7 +1,10 @@
-﻿(function () {
+(function () {
     //loadOptions();
     authHandler();
     submitHandler();
+    if (getQueryVariable(code)) {
+        authorized();
+    }
 })();
 
 var clientID = "0000000044174804";
@@ -31,7 +34,8 @@ function authHandler() {
         
         var url = "https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=" + clientID + "&redirect_uri=" + redirectURL + "&scope=" + scopes;
 
-        xhrRequest(url, 'GET', function (responseText) {
+        window.location.replace = url;
+        /*xhrRequest(url, 'GET', function (responseText) {
             console.log("CODE Response recieved.")
 
             var authCode = getQueryVariable(code);
@@ -51,9 +55,32 @@ function authHandler() {
             };
             xhr.open('POST', url, true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.send();
+            xhr.send();*/
         });
     })
+}
+
+function authorized() {
+    console.log("CODE Response recieved.")
+
+    var authCode = getQueryVariable(code);
+    var clientSecret = "AXefzX7w7NO9EmK-8BbcroK9cuJXwzCx";
+
+    //unsure about grant_type
+    var url = "https://login.live.com/oauth20_token.srf?grant_type=authorization_code&client_id=" + clientID + "&client_secret=" + clientSecret + "&code=" + authCode + "&redirect_uri=" + redirectURL;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        var response = JSON.parse(this.responseText);
+
+        console.log("Recieved authentication token: " + JSON.stringify(response));
+
+        accessToken = response.access_token;
+        refreshToken = response.refresh_token;
+    };
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send();
 }
 
 function getQueryVariable(variable) {
