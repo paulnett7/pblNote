@@ -5,12 +5,15 @@
 	"companyName": "NCC",
 	"versionLabel": "1.0",
 	"sdkVersion": "3",
-	"targetPlatforms": ["aplite", "basalt", "chalk"],
+	"targetPlatforms": ["basalt", "chalk"], //return "aplite" if viewing of notes is written
 	"watchapp": {
 		"watchface": false
 	},
 	"appKeys": {
-		
+    "KEY_AUTH_TOKEN": 0,
+    "KEY_REFRESH_TOKEN": 1,
+    "KEY_AUTH_FAILED":  2,
+    "KEY_QUICKNOTE_TEXT": 3
 	},
 	"resources": {
 		"media": []
